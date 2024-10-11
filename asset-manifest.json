@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/artisanodyssey/static/css/main.b0ca4979.css",
-    "main.js": "/artisanodyssey/static/js/main.f2a06638.js",
+    "main.css": "/artisanodyssey/static/css/main.08fcb86d.css",
+    "main.js": "/artisanodyssey/static/js/main.8f8f5177.js",
     "static/js/453.3d3c0cc6.chunk.js": "/artisanodyssey/static/js/453.3d3c0cc6.chunk.js",
     "index.html": "/artisanodyssey/index.html",
-    "main.b0ca4979.css.map": "/artisanodyssey/static/css/main.b0ca4979.css.map",
-    "main.f2a06638.js.map": "/artisanodyssey/static/js/main.f2a06638.js.map",
+    "main.08fcb86d.css.map": "/artisanodyssey/static/css/main.08fcb86d.css.map",
+    "main.8f8f5177.js.map": "/artisanodyssey/static/js/main.8f8f5177.js.map",
     "453.3d3c0cc6.chunk.js.map": "/artisanodyssey/static/js/453.3d3c0cc6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0ca4979.css",
-    "static/js/main.f2a06638.js"
+    "static/css/main.08fcb86d.css",
+    "static/js/main.8f8f5177.js"
   ]
 }
