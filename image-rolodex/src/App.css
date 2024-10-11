@@ -1,0 +1,291 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  background-color: #d7bca3;
+  border-bottom: 5px solid #8b5e3c;
+}
+
+.menu-item {
+  padding: 10px;
+  background-color: #f5d3b2;
+  border: 3px solid #8b5e3c;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.content-area {
+  padding: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-viewer {
+  width: 100%; /* Set the width to fit within the gallery-item */
+  height: 300px; /* Set a fixed height for the image viewer */
+}
+
+.zoomable-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* General page styling */
+body {
+  background-color: #f4e8d4; /* Warm beige tone for a cozy feel */
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif; /* Give the text a more rustic, homely feel */
+}
+
+
+/* Top bar like artwork frames */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #d7bca3; /* Muted wood color for a warm effect */
+  border-bottom: 5px solid #8b5e3c;
+}
+
+.top-bar .menu-item {
+  padding: 10px;
+  background-color: #f5d3b2; /* Light tan */
+  border: 3px solid #8b5e3c;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.top-bar .menu-item:hover {
+  background-color: #e9b89e;
+}
+
+/* Rustic themed buttons */
+.rustic-button {
+  background-color: #a6806e; /* Rustic brown */
+  border: 2px solid #8b5e3c; /* Wood-like border */
+  padding: 10px 20px;
+  color: white;
+  font-family: 'Georgia', serif;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rustic-button:hover {
+  background-color: #8b5e3c; /* Darken on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Zoom overlay styled like a window into the frame */
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.content-area {
+  padding: 20px;
+}
+
+.google-map {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.calendar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.frame {
+  border: 15px solid transparent; /* Main outer border, change size as necessary */
+  border-image: url('https://imgs.search.brave.com/0K48RG9fggrnYRHvvaSkq9prU_CXUiZeQfq6ey-GxOg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE0/NTYwMjgxNC9waG90/by9uYXR1cmFsLXdv/b2QtdGV4dHVyZS5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/clNNY3dkbVlxWGdZ/NjBaSUdCcWlGMDcw/MWVkUWRiUGVTd3Jp/N3pmRHRlZz0') 30 stretch; /* Apply wood texture as the border */
+  border-radius: 15px; /* Round the edges slightly to mimic a carved feel */
+  padding: 20px; /* Space inside the frame */
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: #fff; /* White content background inside the frame */
+  box-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.5), /* Outer shadow for the frame depth */
+    inset 0 0 15px rgba(0, 0, 0, 0.3), /* Inner shadow to simulate carving depth */
+    0 0 30px rgba(0, 0, 0, 0.2); /* Another outer shadow to add dimension */
+    overflow: hidden;
+}
+.frame.expanded {
+  max-height: 800px; /* Expanded height when "Learn More" is clicked */
+}
+
+.learn-more-content {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rustic-button {
+  background-color: #a6806e;
+  border: 2px solid #8b5e3c;
+  padding: 10px 20px;
+  color: white;
+  font-family: 'Georgia', serif;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+.rustic-button:hover {
+  background-color: #8b5e3c;
+}
+
+.frame::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: linear-gradient(
+    to right, 
+    rgba(139, 69, 19, 0.8) 0%, 
+    rgba(205, 133, 63, 0.5) 100%
+  ); /* Ornate wood-color gradient */
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.frame-content {
+  background: #fefefe;
+  border: 5px solid #d4a373; /* Inner gold-ish border for a polished look */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+}
+
+.zoomed-image {
+  max-width: 90%;
+  max-height: 90%;
+  border: 5px solid #8b5e3c; /* Wooden frame around zoomed image */
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.contact {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.social-media-embeds {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.social-media {
+  max-width: 500px;
+}
+
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.gallery h2 {
+  margin-bottom: 20px;
+}
